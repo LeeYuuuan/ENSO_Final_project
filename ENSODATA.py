@@ -18,7 +18,7 @@ class EarthDataSet(Dataset):
     
 
 def Load_Data(datatp='SODA', merge_ft=None , dataset_type=None, deactivate_feature=None):
-    PATH = "/content/drive/MyDrive/Colab Notebooks/Applied_AI_Course_Assignment/Fin_project/data/enso_round1_train_20210201/"
+    PATH = "/home/lzhang51/Documents/Applied_AI_FP/ENSO_data/"
     if datatp == 'SODA':
         train = xr.open_dataset(PATH+'SODA_train.nc')
         label = xr.open_dataset(PATH+'SODA_label.nc')
