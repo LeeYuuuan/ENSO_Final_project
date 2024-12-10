@@ -11,7 +11,6 @@ This repository contains code and resources for predicting the Nino3.4 index usi
 
 - [**Introduction**](#introduction)
 - [**Explanation of Directories & Files**](#explanation-of-directories--files)  
-- [**Getting Started**](#getting-started)  
 - [**Requirements**](#requirements)  
 
 
@@ -45,7 +44,7 @@ this task. Then, train and evaluate these deep learning model with high accuracy
 Conduct feature evaluation on the dataset to assess the impact of different features on prediction
 outcomes.
 
-## 🗂️ **Explanation of Directories & Files**
+##  **Explanation of Directories & Files**
 
 ### **model/**
 This folder contains the implementation of various machine learning models:
