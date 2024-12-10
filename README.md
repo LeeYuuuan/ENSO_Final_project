@@ -1,47 +1,72 @@
-# Nino3.4 Index Prediction with Deep Learning
+# Nino3.4 Index Prediction with Machine Learning Models
 
-This repository provides a deep learning pipeline for predicting the Nino 3.4 Index using CNN, LSTM, and Transformer models. The provided models are trained and evaluated using two main climate datasets: SODA (Simple Ocean Data Assimilation) and CMIP (Coupled Model Intercomparison Project).
-
----
-
-## Table of Contents
-
-1. [Introduction](#introduction)  
-2. [Directory Structure](#directory-structure)  
-3. [Setup & Installation](#setup--installation)  
-4. [Dataset Description](#dataset-description)  
-5. [Model Overview](#model-overview)  
-6. [How to Train Models](#how-to-train-models)  
-7. [Experimentation with Multiple Models](#experimentation-with-multiple-models)  
-8. [Results & Visualization](#results--visualization)  
-9. [Acknowledgments](#acknowledgments)  
+This repository provides code and models for predicting the **Nino3.4 index** using machine learning models like CNN, LSTM, and Transformer.
 
 ---
 
-## Introduction
+## 🚀 **Table of Contents**
 
-The goal of this project is to implement machine learning models (CNN, LSTM, Transformer, and combinations thereof) to predict the **Nino 3.4 Index**, which is a key climate indicator for ENSO (El Niño-Southern Oscillation) events. The results are achieved by leveraging climate datasets and testing the performance of these machine learning models under different experimental settings.
-
-The implemented pipeline supports training and evaluation on different combinations of the SODA and CMIP datasets using various model types. This repository provides scripts and utilities for model training, feature analysis, and result visualization.
+- [**Explanation of Directories & Files**](#explanation-of-directories--files)  
+- [**Getting Started**](#getting-started)  
+- [**Requirements**](#requirements)  
+- [**Setup Instructions**](#setup-instructions)  
+- [**Training & Usage**](#training--usage)  
 
 ---
 
-## Directory Structure
+## 🗂️ **Explanation of Directories & Files**
 
-```plaintext
-.
-├── model/                      # Model definitions folder
-│   ├── CNNModel.py             # CNN model implementation
-│   ├── LSTMModel.py            # LSTM model implementation
-│   └── TransformerModel.py     # Transformer model implementation
-│
-├── utils.py                     # Utility functions for plotting and validation
-├── ENSODATA.py                  # Dataset class and data loading methods
-│
-├── ENSOTrain.ipynb              # Jupyter Notebook for training experiments
-│
-├── train_model.py               # Main model training script
-│
-├── results/                     # Output directory for storing results
-│
-└── README.md                    # Documentation file
+### **model/**
+This folder contains the implementation of various machine learning models:
+
+- **CNNModel.py**: Implementation of CNN model.  
+- **LSTMModel.py**: Implementation of LSTM model.  
+- **TransformerModel.py**: Implementation of Transformer model.
+
+---
+
+### **ENSODATA.py**
+
+This file contains:
+- **EarthDataSet class** (inherits from `torch.utils.data.Dataset`)  
+- **Load_Data() method**: Used to load climate datasets for Nino3.4 index prediction.
+
+---
+
+### **ENSOTrain.ipynb**
+
+An experimental Jupyter Notebook to:
+- Train machine learning models.  
+- Visualize training results.  
+- Analyze and debug experiments.
+
+---
+
+### **train_model.py**
+
+This script contains the model training logic. It allows users to specify:
+- Model type (CNN, LSTM, Transformer, etc.).  
+- Dataset and training configurations.  
+
+It provides a unified interface to train multiple models.
+
+---
+
+### **utils.py**
+
+A utility script that contains:
+- Functions for drawing and saving loss figures.  
+- Path-checking utilities for ensuring directories exist.  
+- Additional common helper functions.
+
+---
+
+## 🛠️ **Getting Started**
+
+### Requirements
+To run this project, you will need the following dependencies:
+```bash
+torch>=1.x.x
+tqdm
+matplotlib
+jupyter
